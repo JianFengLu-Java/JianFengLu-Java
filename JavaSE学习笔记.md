@@ -1,6 +1,10 @@
 # 01->String类
 
-##### String类中的常用方法（也可以参考API文档）
+[TOC]
+
+------
+
+### String类中的常用方法（也可以参考API文档）
 
 - char charAt(int index):返回索引处的char值。
 
@@ -49,7 +53,8 @@
   System.out.println(a.contains(b));//true
   ```
 
-  
+
+------
 
 # 基本数据类型&包装类
 
@@ -92,7 +97,7 @@
   public class MyInteger{
     //这个类是默认集成所有类的老祖宗：Object基类的。
     //所以这个int值传进来以后，它就被包装成一个Object类的对象了。
-    private int value;
+    private final int value;
     public MyInteger(int value){
       this.value = value;
     }
@@ -107,6 +112,27 @@
   }
   ```
 
-  
+- 包装类的实现原理⬆️
 
-###### 
+### 装箱与拆箱
+
+#### 拆箱(unboxing)
+
+- Byte、Short、Integer、Long...等六个数字型包装类都继承了Number类
+
+- 因此这些类中都有以下方法
+
+  | Method                   |
+  | ------------------------ |
+  | byteValue()-> `byte`     |
+  | shortValue()-> `short`   |
+  | intValue()-> `int`       |
+  | longValue()-> `long`     |
+  | floatValue()-> `float`   |
+  | doubleValue()-> `double` |
+
+  这些方法的作用是将**包装类型数据**转换成**基本类型数据**，调用以上六个方法中任何一个都叫<u>*‘拆箱’*</u>
+
+- Boolean的拆箱方法是：booleanValue()
+- Charaction的拆箱方法是：charValue()
+- 
