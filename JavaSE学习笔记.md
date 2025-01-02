@@ -136,3 +136,17 @@
 - Boolean的拆箱方法是：booleanValue()
 - Charaction的拆箱方法是：charValue()
 - 
+
+### UUID
+
+- 工具类java.util.UUID
+- UUID是一种软件构建标准，用来生成具有唯一性的ID
+- UUID具有以下特点：
+  - UUID可以在分布式系统中生成唯一标识符，避免因主键冲突等造成的问题带来的麻烦。
+  - UUID具有足够的唯一性，重复的概率相当低，UUID使用的是128位数字
+  - UUID在生成时不依赖任何中央控制器或者数据库服务器，可以在本地方便快捷的生成唯一标识符
+  - UUID生成后可以被许多其他的编程语言支持，并方便的转化为字符串的形式表示，适用于多种应用场景。
+  - 在Java开发中，UUID的作用非常广泛，可以用于生成数据表主键，场景标识符、链路追踪、缓存key等
+- 使用：
+  - 生成UUID: static UUID randomUUID();
+  - 将UUID转换为字符串:  String toString();
